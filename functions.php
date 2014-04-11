@@ -1,5 +1,8 @@
 <?php 
 
+define( 'ACF_LITE', true );
+include_once('advanced-custom-fields/acf.php');
+
 
 // RSS feed fetch interval
 add_filter('wp_feed_cache_transient_lifetime',create_function('$a', 'return 60;'));
@@ -21,7 +24,7 @@ if(function_exists("register_field_group"))
 				'instructions' => 'På vilket sätt får andra än upphovsrättsinnehavaren (författaren/fotografen/...) använda materialet? Vi föredrar Creative Commons (CC) som tillåter andra att använda materialet.',
 				'required' => 1,
 				'choices' => array (
-					'cc-by-nc-sa' => 'CC (BY-NC-SA) 3.0',
+					'cc-by-nc-sa' => 'CC (BY-NC-SA) 4.0',
 					'cc0' => 'CC0 - No rights reserved',
 					'copyright' => '© - All rights reserved',
 				),
