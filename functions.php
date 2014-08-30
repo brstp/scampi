@@ -7,7 +7,11 @@ include_once('advanced-custom-fields/acf.php');
 // RSS feed fetch interval
 add_filter('wp_feed_cache_transient_lifetime',create_function('$a', 'return 60;'));
 
-//
+// Icrease media upload size
+@ini_set( ‘upload_max_size’ , ’5M’ );
+@ini_set( ‘post_max_size’, ’5M’);
+@ini_set( ‘max_execution_time’, ’1000′ );
+
 
 
 if(function_exists("register_field_group"))
